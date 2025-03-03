@@ -66,7 +66,6 @@ public class SellerDaoJDBC implements SellerDao {
 			ps = conn.prepareStatement(
 					"UPDATE seller SET Name = ?, Email = ?, BirthDate = ?, BaseSalary = ?, DepartmentId = ? WHERE Id = ?",
 					Statement.RETURN_GENERATED_KEYS);
-			System.out.println(obj);
 			ps.setString(1, obj.getName());
 			ps.setString(2, obj.getEmail());
 			ps.setDate(3, new java.sql.Date(obj.getBirthdate().getTime()));
